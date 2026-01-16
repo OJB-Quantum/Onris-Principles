@@ -1,5 +1,5 @@
-# Onri-Principle
-An Introduction to Onri's Principle.
+# Onris-Principles
+An Introduction to Onri's Core Principles.
 
 ![image](https://github.com/user-attachments/assets/92a9015a-f133-4185-aadf-d7039bc15c89)
 
