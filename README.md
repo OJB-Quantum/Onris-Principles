@@ -17,8 +17,6 @@ If one provides the right ingredients, applied in the right way, then the system
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
-![image](https://github.com/user-attachments/assets/92a9015a-f133-4185-aadf-d7039bc15c89)
-
 ![image](https://github.com/user-attachments/assets/33f72cd8-0ab6-422e-9bfa-314f6114c962)
 
 ![image](https://github.com/user-attachments/assets/f5bd1790-40be-4b32-b4fb-12213441e707)
