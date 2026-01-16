@@ -1,7 +1,7 @@
 # Onris-Principles
-An Introduction to Onri's Core Principles.
+An Introduction to the core principles of Onri Jay Benally.
 
-## Onri's Core Principles
+## The Core Principles of Onri Jay Benally
 - Self-sufficiency
 - De-nuancing
 - Strategy (starting with information gathering/ raw data compilation)
@@ -9,6 +9,13 @@ An Introduction to Onri's Core Principles.
 
 I am of the opinion, which is very strong, that nuance, when applied to a topic, should never remain nuanced forever. The nuance should progressively diminish, ideally to zero, as the ultimate goal, although the realistic goal is slightly less than the true ideal, which is fine. Thus, it becomes clarified and straightforward, with clear instruction that enables clear decisions and applications when relevant. If something remains nuanced perpetually, then clearly there is a kind of laziness or intellectual laziness that needs to be addressed, as well as an acknowledgment of the next steps to be taken and a highlight of what was overlooked for full transparency and proactivity. I think this is key to human-to-human interaction being successful and to long-term social stability. - Onri Jay Benally (2025)
 
+If one provides the right ingredients, applied in the right way, then the system of interest will solve its own self internally, no matter how complicated its mechanics are. - It is likened to a perpendicular or orthogonal relationship to that of Murphy's Law*,** .
+
+*Murphy's Law states: "anything that can go wrong, will go wrong."
+
+**Murphy's Law highlights the inevitability of failure modes.
+
+<img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
 ![image](https://github.com/user-attachments/assets/92a9015a-f133-4185-aadf-d7039bc15c89)
 
