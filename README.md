@@ -9,7 +9,7 @@ An Introduction to the core principles of Onri Jay Benally.
 
 I am of the opinion, which is very strong, that nuance, when applied to a topic, should never remain nuanced forever. The nuance should progressively diminish, ideally to zero, as the ultimate goal, although the realistic goal is slightly less than the true ideal, which is fine. Thus, it becomes clarified and straightforward, with clear instruction that enables clear decisions and applications when relevant. If something remains nuanced perpetually, then clearly there is a kind of laziness or intellectual laziness that needs to be addressed, as well as an acknowledgment of the next steps to be taken and a highlight of what was overlooked for full transparency and proactivity. I think this is key to human-to-human interaction being successful and to long-term social stability. - Onri Jay Benally (2025)
 
-If you have the right ingredients, applied in the right way, then the system of interest will solve its own self internally, no matter how complicated its mechanics are. - It's kind of like a perpendicular or orthogonal relationship to that of Murphy's Law*,** .
+If one provides the right ingredients, applied in the right way, then the system of interest will solve its own self internally, no matter how complicated its mechanics are. - It is likened to a perpendicular or orthogonal relationship to that of Murphy's Law*,** .
 
 *Murphy's Law states: "anything that can go wrong, will go wrong."
 
