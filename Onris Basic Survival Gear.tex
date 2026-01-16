@@ -1,0 +1,1637 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Beamer Presentation: Onri's Basic Gear for Survival or Living Alone
+% Author: Onri Jay Benally
+% Date: January 3, 2026
+%
+% OVERLEAF COMPATIBILITY NOTES
+%   - Recommended compiler: XeLaTeX (or LuaLaTeX).
+%   - This deck uses IBM Plex Sans via fontspec. Overleaf typically provides it.
+%     A fallback sans font is provided if IBM Plex Sans is not available.
+%   - References are embedded using filecontents + biblatex (backend=biber).
+%
+%     Beamer reference deck (Madrid theme, explicit font configuration, and
+%     adjustable sizing knobs for dense slides).
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ----------------------------
+% Embedded bibliography (self-contained)
+% ----------------------------
+\begin{filecontents*}{\jobname.bib}
+@misc{ccby4,
+  author       = {{Creative Commons}},
+  title        = {Attribution 4.0 International (CC BY 4.0) --- Deed},
+  year         = {2013},
+  howpublished = {\url{https://creativecommons.org/licenses/by/4.0/deed.en}},
+  note         = {Accessed 2026-01-03}
+}
+
+@misc{plato_fl1,
+  author       = {{Portable Lights American Trade Organization (PLATO)}},
+  title        = {Why is the ANSI/PLATO FL 1 Standard important?},
+  year         = {2016},
+  howpublished = {\url{https://www.plato-usa.org/about/standard}},
+  note         = {Defines beam distance at 0.25 lux; accessed 2026-01-03}
+}
+
+@misc{streamlight_ansi,
+  author       = {{Streamlight}},
+  title        = {ANSI Information (ANSI/PLATO FL 1 overview)},
+  year         = {n.d.},
+  howpublished = {\url{https://www.streamlight.com/resources/learning/ansi-information}},
+  note         = {Accessed 2026-01-03}
+}
+
+@misc{faa_lasers,
+  author       = {{Federal Aviation Administration (FAA)}},
+  title        = {Laser Safety},
+  year         = {2025},
+  howpublished = {\url{https://www.faa.gov/about/initiatives/lasers}},
+  note         = {Updated 2025-09-02; accessed 2026-01-03}
+}
+
+@misc{usc_39a,
+  author       = {{Legal Information Institute, Cornell Law School}},
+  title        = {18 U.S. Code § 39A --- Aiming a laser pointer at an aircraft},
+  year         = {n.d.},
+  howpublished = {\url{https://www.law.cornell.edu/uscode/text/18/39A}},
+  note         = {Accessed 2026-01-03}
+}
+
+@misc{fda_laser_pointers,
+  author       = {{U.S. Food and Drug Administration (FDA)}},
+  title        = {Important Information for Laser Pointer Manufacturers},
+  year         = {2017},
+  howpublished = {\url{https://www.fda.gov/radiation-emitting-products/laser-products-and-instruments/important-information-laser-pointer-manufacturers}},
+  note         = {Accessed 2026-01-03}
+}
+
+@misc{uk_laser_safety,
+  author       = {{UK Health Security Agency (UKHSA)}},
+  title        = {Laser radiation: safety advice},
+  year         = {2025},
+  howpublished = {\url{https://www.gov.uk/government/publications/laser-radiation-safety-advice/laser-radiation-safety-advice}},
+  note         = {Accessed 2026-01-03}
+}
+
+@misc{lep_example_thor,
+  author       = {{Going Gear}},
+  title        = {Lumintop Thor II V2 --- White laser emitter (LEP) flashlight specs},
+  year         = {n.d.},
+  howpublished = {\url{https://goinggear.com/products/lumintop-thor-ii-v2-350-lumen-738k-candela-lep-compact-flashlight}},
+  note         = {Example of published ANSI-style beam distance near 1,700 m; accessed 2026-01-03}
+}
+
+@misc{sawyer_mini_specs,
+  author       = {{Sawyer Products}},
+  title        = {MINI Water Filtration System --- Features \& Specs},
+  year         = {n.d.},
+  howpublished = {\url{https://www.sawyer.com/product/mini-water-filtration-system-blue}},
+  note         = {0.1 micron absolute hollow fiber membrane; accessed 2026-01-03}
+}
+
+@misc{sawyer_eu_specs,
+  author       = {{Sawyer Europe}},
+  title        = {Sawyer SP128 MINI Water Filtration System --- Specifications},
+  year         = {n.d.},
+  howpublished = {\url{https://www.sawyereurope.com/water-filtration/sawyer-sp128-mini-water-filtration-system}},
+  note         = {Explains hollow-fiber filtration; accessed 2026-01-03}
+}
+
+@misc{fda_acetaminophen,
+  author       = {{U.S. Food and Drug Administration (FDA)}},
+  title        = {Don't Overuse Acetaminophen},
+  year         = {2024},
+  howpublished = {\url{https://www.fda.gov/consumers/consumer-updates/dont-overuse-acetaminophen}},
+  note         = {Updated 2024-02-01; accessed 2026-01-03}
+}
+
+@misc{peroxide_utah,
+  author       = {{University of Utah Health}},
+  title        = {Should You Use Hydrogen Peroxide to Clean a Wound?},
+  year         = {2023},
+  howpublished = {\url{https://healthcare.utah.edu/the-scope/health-library/all/2023/04/should-you-use-hydrogen-peroxide-clean-wound}},
+  note         = {Notes tissue irritation/damage risk; accessed 2026-01-03}
+}
+
+@misc{peroxide_cleveland,
+  author       = {{Cleveland Clinic}},
+  title        = {Hydrogen Peroxide: How to Use It Properly},
+  year         = {2021},
+  howpublished = {\url{https://health.clevelandclinic.org/what-is-hydrogen-peroxide-good-for}},
+  note         = {Advises against use on wounds; accessed 2026-01-03}
+}
+
+@misc{dhs_thermal_imagers,
+  author       = {{U.S. Department of Homeland Security (DHS)}},
+  title        = {Handheld Thermal Imagers --- Application Note},
+  year         = {2016},
+  howpublished = {\url{https://www.dhs.gov/sites/default/files/publications/Thermal-Imagers-AppN_0216-508_0.pdf}},
+  note         = {Describes operational scanning considerations; accessed 2026-01-03}
+}
+
+@article{wsar_thermal_uav_2025,
+  author  = {Fraternali, P. and others},
+  title   = {Enhancing Search and Rescue Missions with UAV Thermal Imaging},
+  journal = {Remote Sensing},
+  year    = {2025},
+  url     = {https://www.mdpi.com/2072-4292/17/17/3032},
+  note    = {Open access; discusses thermal imaging for detection in vegetation/night}
+}
+
+@article{camphor_repellent_2019,
+  author  = {Asadollahi, A. and others},
+  title   = {Effectiveness of plant-based repellents against different arthropods: a review},
+  journal = {Malaria Journal},
+  year    = {2019},
+  url     = {https://pmc.ncbi.nlm.nih.gov/articles/PMC6925501/},
+  note    = {Open access; cites repellency evidence for camphor oils}
+}
+
+@misc{fcc_gmrs,
+  author       = {{Federal Communications Commission (FCC)}},
+  title        = {General Mobile Radio Service (GMRS)},
+  year         = {2024},
+  howpublished = {\url{https://www.fcc.gov/wireless/bureau-divisions/mobility-division/general-mobile-radio-service-gmrs}},
+  note         = {Updated 2024-08-14; accessed 2026-01-03}
+}
+
+@article{battery_compare_2024,
+  author  = {Evro, S. and others},
+  title   = {Navigating battery choices: A comparative study of lithium iron phosphate and other lithium-ion chemistries},
+  journal = {Cell Reports Sustainability},
+  year    = {2024},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2950264024000078},
+  note    = {Discusses safety factors including thermal runaway}
+}
+
+@misc{nikon_7239,
+  author       = {{Nikon USA}},
+  title        = {Action Extreme 7x50 ATB (Model 7239) --- Overview},
+  year         = {2021},
+  howpublished = {\url{https://www.nikonusa.com/p/action-extreme-7x50-atb/7239/overview}},
+  note         = {Highlights long eye relief; accessed 2026-01-03}
+}
+
+@misc{cdc_backcountry,
+  author       = {{Centers for Disease Control and Prevention (CDC)}},
+  title        = {Water Treatment While Hiking, Camping, and Traveling},
+  year         = {2025},
+  howpublished = {\url{https://www.cdc.gov/drinking-water/communication-resources/water-treatment-traveling.html}},
+  note         = {Advises boiling or filtering then disinfecting; updated 2025-08-29; accessed 2026-01-03}
+}
+
+@misc{cdc_yellowbook_filters_viruses,
+  author       = {{Centers for Disease Control and Prevention (CDC)}},
+  title        = {Water Disinfection for Travelers (CDC Yellow Book) --- Filter pore size},
+  year         = {2025},
+  howpublished = {\url{https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html}},
+  note         = {Notes portable microfilters do not reliably remove enteric viruses; accessed 2026-01-03}
+}
+
+@misc{acebeam_w50_20,
+  author       = {{Acebeam}},
+  title        = {W50 2.0 Zoomable LEP Flashlight --- Specifications (beam distance up to 5,062 m in spot mode)},
+  year         = {n.d.},
+  howpublished = {\url{https://www.acebeam.com/w50-20-zoomable-lep-flashlight}},
+  note         = {Manufacturer specs page; accessed 2026-01-03}
+}
+
+
+
+@misc{cdc_tick_bite,
+  author       = {{Centers for Disease Control and Prevention}},
+  title        = {What to Do After a Tick Bite},
+  year         = {2025},
+  url          = {https://www.cdc.gov/ticks/after-a-tick-bite/index.html},
+  urldate      = {2026-01-03},
+  note         = {Guidance includes fine-tipped tweezers and discourages petroleum jelly/heat/nail polish methods.},
+}
+
+@misc{cdc_nail_hygiene,
+  author       = {{Centers for Disease Control and Prevention}},
+  title        = {Clinical Safety: Hand Hygiene for Healthcare Workers},
+  year         = {2024},
+  url          = {https://www.cdc.gov/clean-hands/hcp/clinical-safety/index.html},
+  urldate      = {2026-01-03},
+}
+
+@article{bogerd_headgear_2015,
+  author       = {Bogerd, Cornelis P. and Aerts, Jean-Marie and Annaheim, Simon and Brode, Peter and de Bruyne, Guido and Flouris, Andreas D. and Kuklane, Kalev and Sotto Mayor, Tiago and Rossi, Rene M.},
+  title        = {A review on ergonomics of headgear: Thermal effects},
+  journal      = {International Journal of Industrial Ergonomics},
+  year         = {2015},
+  volume       = {45},
+  pages        = {1--12},
+  doi          = {10.1016/j.ergon.2014.10.004},
+  url          = {https://lirias.kuleuven.be/retrieve/43e2cada-7e6b-4bb3-bf94-b8ef0fd11521},
+  urldate      = {2026-01-03},
+}
+
+@article{wbm_review_2023,
+  author       = {Chang, Yawen and Liu, Fujuan},
+  title        = {Review of Waterproof Breathable Membranes: Preparation, Performance and Applications in the Textile Field},
+  journal      = {Materials (Basel)},
+  year         = {2023},
+  volume       = {16},
+  number       = {15},
+  pages        = {5339},
+  doi          = {10.3390/ma16155339},
+  url          = {https://pmc.ncbi.nlm.nih.gov/articles/PMC10419557/},
+  urldate      = {2026-01-03},
+}
+
+@article{vasile_knit_2025,
+  author       = {Vasile, Simona and Vega Arellano, Jaime Paolo and Copot, Cosmin and Osman, Ahmad and De Raeve, Alexandra},
+  title        = {Thermal and Moisture Management Properties of Knitted Fabrics for Skin-Contact Workwear},
+  journal      = {Materials},
+  year         = {2025},
+  volume       = {18},
+  number       = {8},
+  pages        = {1859},
+  doi          = {10.3390/ma18081859},
+  url          = {https://www.mdpi.com/1996-1944/18/8/1859},
+  urldate      = {2026-01-03},
+}
+
+@article{mlynarczyk_underwear_2025,
+  author       = {M{\l}ynarczyk, Magdalena and Orysiak, Joanna and Kopyt, Aleksandra and Ordysi{\'n}ski, Szymon},
+  title        = {Effect of Underwear Materials on the Thermal Insulation of Barrier Protective Clothing},
+  journal      = {Materials},
+  year         = {2025},
+  volume       = {19},
+  number       = {1},
+  pages        = {124},
+  doi          = {10.3390/ma19010124},
+  url          = {https://www.mdpi.com/1996-1944/19/1/124},
+  urldate      = {2026-01-03},
+  note         = {Published 30 December 2025; appears in Volume 19, Issue 1 (2026).},
+}
+
+@article{jussila_arctic_2017,
+  author       = {Jussila, Kirsi and Rissanen, Sirkka and Aminoff, Anna and Wahlstr{\"o}m, Jens and Vaktskjold, Arild and Talykova, Ljudmila and Remes, Jouko and M{\"a}ntt{\"a}ri, Satu and Rintam{\"a}ki, Hannu},
+  title        = {Thermal comfort sustained by cold protective clothing in Arctic open-pit mining---a thermal manikin and questionnaire study},
+  journal      = {Industrial Health},
+  year         = {2017},
+  volume       = {55},
+  number       = {6},
+  pages        = {537--548},
+  doi          = {10.2486/indhealth.2017-0154},
+  url          = {https://pmc.ncbi.nlm.nih.gov/articles/PMC5718774/},
+  urldate      = {2026-01-03},
+}
+
+\end{filecontents*}
+
+\documentclass[aspectratio=169]{beamer}
+
+%------------------------------------------------
+%   PRESENTATION METADATA
+%------------------------------------------------
+\title[Basic Gear: Survival or Living Alone]{Onri's Basic Gear for Survival or Living Alone}
+\subtitle{A daily-life-ready, wilderness-credible capability stack}
+\author{Onri Jay Benally}
+\institute{Field-practical systems view}
+\date{January 3, 2026}
+
+%------------------------------------------------
+%   THEME AND STYLING (match the reference deck)
+%------------------------------------------------
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Keep margins conservative to reduce the chance of overfull boxes.
+\setbeamersize{text margin left=8.5mm, text margin right=8.5mm}
+
+%------------------------------------------------
+%   PACKAGES (expanded from the reference deck)
+%------------------------------------------------
+\usepackage{fontspec}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% Allow LaTeX more flexibility to avoid overfull lines in dense slides.
+\setlength{\emergencystretch}{2em}
+\sloppy
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+\usepackage{alltt}
+\usepackage{multirow}
+\usepackage{dirtree}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,fit,backgrounds,arrows.meta}
+
+% Bibliography
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{\jobname.bib}
+
+%------------------------------------------------
+%   FONT CONFIGURATION (IBM PLEX SANS; with fallback)
+%------------------------------------------------
+\IfFontExistsTF{IBM Plex Sans}{
+  \setsansfont{IBM Plex Sans}[
+    Scale=MatchLowercase,
+    Ligatures=TeX,
+    UprightFont = *-Regular,
+    ItalicFont  = *-Italic,
+    BoldFont    = *-SemiBold
+  ]
+}{
+  \setsansfont{Noto Sans}[Scale=MatchLowercase, Ligatures=TeX]
+}
+\renewcommand\familydefault{\sfdefault}
+
+% Monospace (for ASCII trees or code-like blocks)
+\IfFontExistsTF{IBM Plex Mono}{
+  \setmonofont{IBM Plex Mono}[Scale=MatchLowercase, Ligatures=NoCommon]
+}{
+  \IfFontExistsTF{DejaVu Sans Mono}{
+    \setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]
+  }{
+    \setmonofont{Noto Sans Mono}[Scale=MatchLowercase]
+  }
+}
+
+%------------------------------------------------
+%   FONT SIZE CONFIGURATION (match the reference deck style)
+%------------------------------------------------
+\setbeamerfont{title}{size=\huge, series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+\setbeamerfont{normal text}{size=\normalsize}
+\setbeamerfont{block title}{size=\large}
+\setbeamerfont{block body}{size=\normalsize}
+\setbeamerfont{footnote}{size=\tiny}
+
+% Adjustable content-size knobs for dense slides (control knobs).
+\newcommand{\DenseBodySize}{\scriptsize}   % try: \small | \footnotesize | \scriptsize | \tiny
+\newcommand{\TableBodySize}{\footnotesize} % try: \small | \footnotesize | \scriptsize
+
+%------------------------------------------------
+%   PRESENTATION HELPER MACROS
+%------------------------------------------------
+\newcommand{\GearTag}[1]{\textbf{#1}}
+
+% Tighter itemize spacing for beamer (without overflow).
+\setlist[itemize]{itemsep=2pt, topsep=2pt}
+\setlist[enumerate]{itemsep=2pt, topsep=2pt}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+
+%------------------------------------------------
+%   PRESENTATION BEGINS
+%------------------------------------------------
+\begin{document}
+
+%------------------------------------------------
+% TITLE SLIDE
+%------------------------------------------------
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%------------------------------------------------
+% SCOPE/ POSITIONING
+%------------------------------------------------
+\begin{frame}
+  \frametitle{Scope and intent (daily living + credible emergencies)}
+  \justifying
+  \begin{block}{Core idea}
+    The list describes a \emph{daily-life} baseline that can support living alone, including in mountain wilderness contexts, while also allowing selected items to be pulled into an emergency grab-bag or vehicle kit.
+  \end{block}
+
+  \begin{block}{Important boundaries}
+    This material is educational and operationally oriented. Medical decisions should follow qualified guidance and product labeling; local laws and regulations govern tools, radios, and lasers. References are provided for standards and safety context.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=20]
+  \frametitle{Roadmap}
+  \tableofcontents
+\end{frame}
+
+%================================================
+\section{Systems view: capability, risk, and routines}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Gear as a capability stack (not only a ``small kit'')}
+  \justifying
+   A resilient setup comes from repeatable routines: carrying, storing, maintaining, and checking tools so that ordinary days and unusual days share the same foundation.
+
+  \vspace{0.6em}
+   The gear set behaves like a coupled system. Reliability increases when items (i) reduce failure modes, (ii) reduce task time, and (iii) reduce injury likelihood. The practical target is a high expected ``uptime'' for household and field operations, rather than a single optimized pack.
+
+  \vspace{0.8em}
+  \begin{block}{Three operating layers}
+    \begin{itemize}
+      \item \GearTag{On-body/ near-body}: items used multiple times per day (light, pen, gloves).
+      \item \GearTag{Home base}: tools and supplies that stabilize daily life (tapes, first aid, batteries).
+      \item \GearTag{Field module}: selected subsets for storms, travel, or wilderness movement.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Overall gear ecosystem (updated: tow/rope/rigging)}
+  % Dirtree can overflow easily; adjustbox ensures the tree stays within margins.
+  \centering
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{minipage}{1.4\textwidth}
+  \scriptsize
+  \dirtree{%
+  .1 Onri's basic gear ecosystem.
+  .2 Wearables \& shells.
+  .3 Gloves: wind/waterproof; work; ski/winter.
+  .3 Shoes; thermals (base layers); waterproof hat(s); windbreaker(s); waterproof parka.
+  .2 Hand tools \& materials.
+  .3 Knives: thin slicer; thick utility.
+  .3 Scissors; pliers; crescent wrench; pipe wrench.
+  .3 Mallets: wooden, metal; chisels: wood, stone.
+  .3 Leather sheets; tapes (gaffer, butyl rubber, Gorilla).
+  .2 Tow, rope, and rigging.
+  .3 Heavy-duty tow strap (vehicle recovery; anchor-rated loops).
+  .3 Heavy-duty nylon rope (dynamic handling; abrasion awareness).
+  .3 Heavy-duty polyester rope (lower stretch; wet-stability).
+  .3 Carabiners (rated); soft shackles; prusik loops; edge protection.
+  .3 Gloves as a rope interface: reduces burns and improves control.
+  .2 Visibility \& sensing.
+  .3 Flashlights: flood; white laser (LEP).
+  .3 Laser pointer; magnifying glass; binoculars; USB-C thermal camera.
+  .2 Health \& hygiene.
+  .3 First aid kit; petroleum jelly; soap; sanitizer; dental kit; tweezers; nail clippers.
+  .3 Liquified mint (camphor/eucalyptus concentrate) as pest repellent.
+  .2 Water \& food thermal.
+  .3 Thermos; metal cup; Pyrex glass bowl; mini water filter.
+  .2 Power \& communications.
+  .3 Two-way radio; 2 phones; foldable solar panel.
+  .3 21700 battery pack (USB-C); 12V SLA or 12V LiFePO4.
+  .3 Laptop (ThinkPad X1 Extreme, GTX 1650) as compute/logistics module.
+  }
+  \end{minipage}
+  \end{adjustbox}
+\end{frame}
+
+
+\begin{frame}[t]
+  \frametitle{Risk model: what daily gear quietly prevents}
+  \justifying
+  Many ``survival'' events are incremental: small injuries, lost light, wet clothing, depleted batteries, and preventable infections.
+
+  \vspace{0.6em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Failure mode} & \textbf{Typical trigger} & \textbf{Stabilizers in the list} \\
+      \midrule
+      Loss of visibility & blackout, dusk, fog, snow & flood flashlight; long-throw white laser light; spare cells \\
+      Hand injury/ abrasion & cold metal, sharp edges, rope & three glove types; pliers; disciplined cutting \\
+      Wet/cold exposure & wind, rain, immobilization & windbreaker; waterproof parka; dry storage bags \\
+      Water uncertainty & long day, frozen source & thermos; metal cup (boil); mini filter \\
+      Decision overload & stress + low sleep & labeled bags; checklists; pen/logging \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Modularity: daily stack vs emergency extraction}
+  \justifying
+  \begin{columns}[T,totalwidth=\textwidth]
+    \begin{column}{0.45\textwidth}
+      \begin{block}{Daily baseline (lives at home base)}
+        \begin{itemize}
+          \item Tools and materials for repair, cooking, and upkeep.
+          \item Hygiene and first aid sized for routine usage.
+          \item Power and charging sized for ordinary and storm cycles.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Emergency extraction (subset modules)}
+        \begin{itemize}
+          \item Light + gloves + knife + first aid.
+          \item Water module (filter + cup + thermos).
+          \item Comms/power module (radio + phone + cells).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.6em}
+  \begin{block}{Operational note}
+    A system that supports daily life tends to outperform ``emergency-only'' storage because it is maintained, familiar, and continually validated in real tasks.
+  \end{block}
+\end{frame}
+
+%================================================
+\section{Wearables and weather: keeping the human platform stable}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Gloves (three types): wind/waterproof, work, ski/winter}
+  \justifying
+   Hands interact with every tool. Gloves prevent small injuries and also improve grip when cold, wet, or tired.
+
+  \vspace{0.5em}
+   Gloves implement risk reduction by changing friction, contact pressure, and thermal boundary conditions; they also shape human factors by reducing hesitation during high-friction tasks.
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Type} & \textbf{Primary role} & \textbf{Selection notes} \\
+      \midrule
+      Windproof/waterproof & wet handling, rain/snow chores & prioritize seam sealing; avoid clammy interiors \\
+      Work gloves & tools, abrasion, leverage tasks & durable palms; fit that preserves dexterity \\
+      Ski/winter & low-temp exposure and insulation & insulation + cuff seal; consider liner system \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+  % Comment for maintainability:
+  % Keeping all three types reduces the temptation to "make do" with the wrong glove,
+  % which often increases both injury probability and task time.
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Windbreaker(s) and waterproof parka: thin shells, large leverage}
+  \justifying
+   Wind and rain accelerate heat loss and fatigue. A shell layer can stabilize comfort enough to keep problem-solving functional.
+
+  \vspace{0.5em}
+   Shell garments reduce convective heat transfer and manage moisture transport. A windbreaker emphasizes breathability and wind resistance; a waterproof parka emphasizes water exclusion and thermal reserve.
+
+  \vspace{0.8em}
+  \begin{block}{Practical system choice}
+    \begin{itemize}
+      \item \GearTag{Windbreaker(s)}: rapid deployment, daily carry, and layered use.
+      \item \GearTag{Waterproof parka}: long-duration exposure, storms, and immobilization risk.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Shoes: mobility, traction, and injury prevention}
+  \justifying
+   In isolated living contexts, reliable footwear is a safety system: it prevents falls and makes distances manageable.
+
+  \vspace{0.5em}
+   Footwear mediates gait mechanics, traction probability, and cumulative fatigue. Field operations benefit from predictable traction and predictable fit under different sock systems.
+
+  \vspace{0.8em}
+  \begin{block}{Operational checklist}
+    \begin{itemize}
+      \item traction aligned to local terrain (rock, mud, snow, ice),
+      \item fit validated in the socks actually used in winter,
+      \item drying routine to prevent chronic dampness and blistering.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+%================================================
+
+%================================================
+\section{Small but critical: waterproof hats and grooming micro-tools}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Waterproof hats: precipitation control + head microclimate}
+  \justifying
+  \begin{block}
+    A waterproof hat reduces direct rain and snow contact with hair, scalp, and face, which helps keep insulating layers dry and reduces distraction from dripping and wind-driven precipitation.
+  \end{block}
+
+  \begin{block}
+    In cold and wet conditions, thermal comfort is often limited less by absolute temperature and more by \emph{wetting} and \emph{convective forcing}. A hat is a small surface-area intervention that can interrupt liquid-water contact, while also reducing local convective and radiative exchange at the head. Waterproof-breathable membranes (WBMs) are designed to block liquid water while permitting water vapor transport, which helps manage the ``microclimate'' between skin and fabric.~\cite{wbm_review_2023}
+    Headgear thermal-effect reviews summarize how head insulation and ventilation shift heat and mass transfer pathways (radiation, convection, evaporation), which connects directly to outdoor comfort and sustained wearability.~\cite{bogerd_headgear_2015}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=18]
+  \frametitle{Waterproof hats: selection patterns}
+  \justifying
+  \scriptsize
+  \renewcommand{\arraystretch}{0.95}
+  \setlength{\tabcolsep}{4pt}
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      Hat type & Strengths (compressed) & Risks / constraints (compressed) \\
+      \midrule
+      Waterproof brimmed hat & Eye/face runoff control; brim helps in wind-driven rain; pairs with hooded shells & Brim can interfere with optics; seam integrity matters; limited warmth alone \\
+      \addlinespace
+      Insulated beanie + hood & Warmth; modular; fits under hoods/helmets & Wet-out risk in sustained rain; drying time can dominate comfort \\
+      \addlinespace
+      Soft-shell cap (DWR) & Breathable; headlamp-friendly; good for mixed weather & DWR wears off; heavy rain still needs true waterproofing \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+
+\begin{frame}[t]
+  \frametitle{Tweezers and nail clippers: small tools, outsized impact}
+  \justifying
+  \begin{block}
+    Tweezers remove splinters and ticks, while nail clippers keep nails short and smooth, which reduces snagging, reduces skin breaks, and improves hygiene.
+  \end{block}
+
+  \begin{block}
+    Fine-tipped tweezers are recommended by public-health guidance for prompt tick removal (steady upward traction, close to the skin), and ``wait-and-see'' removal methods based on occlusion (for example, petroleum jelly) are explicitly discouraged for ticks.~\cite{cdc_tick_bite}
+    Nail hygiene guidance emphasizes keeping nails short and cleaning grooming tools (including nail clippers) before use to reduce microbial reservoirs under nails; cuticle cutting is discouraged because cuticles function as infection barriers.~\cite{cdc_nail_hygiene}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=18]
+  \frametitle{Tweezers and nail clippers: use-cases and sanitation}
+  \justifying
+  \scriptsize
+  \renewcommand{\arraystretch}{0.95}
+  \setlength{\tabcolsep}{4pt}
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      Tool & Primary use-cases (compressed) & Sanitation / risk notes (compressed) \\
+      \midrule
+      Fine-tipped tweezers & Tick removal; splinters; small-part handling in repairs & Clean/disinfect; rigid storage protects tips and alignment \\
+      \addlinespace
+      Nail clippers + file & Nail control; hangnails; reduces glove tears & Clean clippers; avoid cuticle cutting (infection risk) \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+
+  \vspace{0.4em}
+  \scriptsize
+  Storage in a small hard case reduces contamination transfer into first-aid materials and preserves tool geometry.
+\end{frame}
+
+
+%================================================
+\section{Thermals: underlayer insulation for cold conditions and cold hiking}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Thermals (base layers): insulation begins next to skin}
+  \justifying
+  \begin{block}
+    Thermals (base layers) keep skin drier and warmer by moving sweat away from the body and by adding a thin layer of trapped air.
+  \end{block}
+
+  \begin{block}
+    Base layers are a coupled \emph{heat-and-mass-transfer} problem: moisture next to skin increases evaporative cooling and can accelerate chilling during rest phases. Empirical studies of skin-contact knitted fabrics report measurable differences in air permeability, drying time, and moisture-management metrics across constructions and fiber blends, supporting a technical, testable view of ``warmth'' and ``comfort'' rather than a purely subjective one.~\cite{vasile_knit_2025} 
+    In cold-field environments, clothing selection and layering are repeatedly observed to depend on temperature, wind, moisture, task intermittency, and individual cold sensitivity, which reinforces the value of underlayers as an adjustable control variable rather than a fixed preference.~\cite{jussila_arctic_2017}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Thermals: material and weight trade-offs (selection logic)}
+  \justifying
+  \begin{block}
+    A thin base layer is often enough for active movement, while thicker thermals can help during low-activity tasks, rest stops, or sustained cold wind.
+  \end{block}
+
+  \begin{block}
+    ``More insulation'' is not monotonic benefit: in hot or high-metabolic conditions it can trap heat and slow vapor transport, while in cool-to-cold conditions it can extend comfort and safe working time. Thermal-manikin studies in protective clothing contexts show that changing the underwear layer measurably changes thermal insulation and expected safe time under certain environments, implying that underlayers are a legitimate engineering control variable.~\cite{mlynarczyk_underwear_2025}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=18]
+  \frametitle{Thermals: quick strategy table}
+  \justifying
+  \scriptsize
+  \renewcommand{\arraystretch}{0.95}
+  \setlength{\tabcolsep}{4pt}
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}l l X@{}}
+      \toprule
+      Environment & Activity pattern & Underlayer strategy (compressed) \\
+      \midrule
+      Cold + steady hiking & sustained output & Light-to-mid thermals; prioritize moisture transport; add windbreaker early \\
+      \addlinespace
+      Cold + stop/go & intermittent output & Mid-to-heavy thermals; a dry spare base layer enables rapid change \\
+      \addlinespace
+      Wet + windy & high convection & Mid thermals + high-integrity shell; resist wet-out; maintain vapor transport \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Classification tree: cold-weather layering logic (scaled)}
+  \centering
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{minipage}{0.98\textwidth}
+  \scriptsize
+  \dirtree{%
+  .1 Cold-weather clothing stack.
+  .2 Underlayer (thermals).
+  .3 Lightweight: high-output movement.
+  .3 Midweight: mixed movement + pauses.
+  .3 Heavyweight: low-output tasks; extended cold exposure.
+  .2 Midlayer (variable).
+  .3 Fleece / wool / light puffy: adds trapped air.
+  .3 Moisture control: insulation collapse under wetting.
+  .2 Shell (wind + water).
+  .3 Windbreaker: reduces convective loss early.
+  .3 Waterproof parka: sustained rain/snow; seam integrity.
+  .2 Head layer (microclimate control).
+  .3 Waterproof hat: blocks precipitation and reduces distraction.
+  .3 Hood + beanie: adjustable insulation in gusts.
+  }
+  \end{minipage}
+  \end{adjustbox}
+\end{frame}
+
+
+\section{Hand tools and materials: repair, leverage, and making}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Knife (two types): thin slicer + thick utility}
+  \justifying
+   Two knives reduce compromise: one optimized for food prep and clean slicing, and another optimized for abuse-tolerant utility tasks.
+
+  \vspace{0.5em}
+   The two-knife concept partitions edge geometry and toughness. Thin blades (often with finer grinds) reduce cutting force for fruits and vegetables; thicker blades increase cross-sectional strength and reduce catastrophic failure risk under rough tasks.
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Knife type} & \textbf{Good at} & \textbf{Avoid using for} \\
+      \midrule
+      Thin slicer & fruit/vegetable slicing, clean cuts, fine control & prying, twisting, heavy scraping \\
+      Thick utility & cardboard boxes, heavy packaging, robust cuts & delicate food slicing where crushing is undesirable \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+
+  % Comment requested by the user:
+  % A thick utility knife is sometimes chosen because it is less likely to fail when cutting
+  % through dense packaging; however, cutting metal cans is still a high-risk activity and
+  % is generally better addressed with a proper can opener or shears designed for that task.
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Scissors: precision cutting, and leather-to-DIY-shoes pathway}
+  \justifying
+   Scissors constrain the cut and reduce slip probability compared to freehand knife cuts.
+
+  \vspace{0.5em}
+   Shear cutting distributes load along the blades and captures the workpiece, improving controllability. In repair workflows, scissors often produce more repeatable geometry than knives for flexible materials.
+
+  \vspace{0.8em}
+  \begin{block}{Commentary: leather cutting and improvised footwear}
+    Thick leather sheets can be cut using robust scissors (in multiple progressive passes) to form simple soles and uppers, enabling basic do-it-yourself footwear patterns when conventional shoes fail. The method is slow but controllable, and it pairs naturally with a pen for pattern tracing and with tape for temporary fixation.
+  \end{block}
+
+  % Practical note:
+  % Leather cutting with scissors is most feasible when the leather is not extremely thick.
+  % For very thick leather, a utility knife + cutting mat or a dedicated leather knife
+  % becomes more appropriate, but scissors still excel for controlled curves and trimming.
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Wrenches (two types): crescent wrench + pipe wrench}
+  \justifying
+   Wrenches translate hand force into controlled turning, and they prevent rounding fasteners when the tool fits correctly.
+
+  \vspace{0.5em}
+   Torque transmission is governed by jaw alignment, contact area, and slip probability. Adjustable (crescent) wrenches trade precision for flexibility; pipe wrenches trade surface preservation for bite on round stock.
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Tool} & \textbf{Strength} & \textbf{Primary caution} \\
+      \midrule
+      Crescent/adjustable wrench & broad fastener coverage & jaw play can slip under high torque \\
+      Pipe wrench & strong bite on round pipe & marring + pinch risks; avoid on delicate fittings \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Pliers: gripping, pulling, and wire-level tasks}
+  \justifying
+   Pliers substitute for fragile finger pinch strength under sharp edges and high loads.
+
+  \vspace{0.5em}
+   Pliers change the effective mechanical advantage and local contact pressure. In daily maintenance, they also reduce ergonomic load by stabilizing small parts that would otherwise demand awkward wrist angles.
+
+  \vspace{0.8em}
+  \begin{block}{Selection logic}
+    Needle-nose supports reach and precision; slip-joint supports general household tasks; insulated handles only matter when properly rated and intact.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Mallets and chisels: controlled force and material shaping}
+  \justifying
+   A mallet delivers force without damaging a chisel handle, and chisels remove material predictably.
+
+  \vspace{0.5em}
+   This tool pair enables controlled energy transfer. Wooden mallets reduce rebound and surface marring for woodwork; metal mallets increase energy density but increase the consequences of mis-strikes.
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Type} & \textbf{Best match} & \textbf{Notes} \\
+      \midrule
+      Wooden mallet + wood chisel & joinery, notches, shaping & lower spark risk; gentler on tools \\
+      Metal mallet + stone chisel & masonry/stone splitting & use eye protection; manage flying chips \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Leather sheet(s): repair stock, padding, and long-life material}
+  \justifying
+   Leather sheets act as durable repair stock for reinforcement, abrasion buffering, and patches.
+
+  \vspace{0.5em}
+   As a fibrous composite, leather offers tear resistance and favorable abrasion behavior. In gear systems, it increases robustness by absorbing wear that would otherwise damage tools, bags, or footwear.
+
+  \vspace{0.8em}
+  \begin{block}{Common daily uses}
+    Patch tears; protect bag bottoms; create non-slip mats; reinforce grip points; build simple straps.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Adhesives and tapes: field-seams for a non-ideal world}
+  \justifying
+   Tape turns broken objects into usable objects quickly, even when aesthetics are irrelevant.
+
+  \vspace{0.5em}
+   Tapes are temporary boundary-condition fixes: they create new load paths, seal airflow, and constrain moving parts. Different tapes are effectively different polymers and adhesives, with different temperature and surface constraints.
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Tape} & \textbf{Strength} & \textbf{Best use} \\
+      \midrule
+      Gaffer tape & removal with low residue & bundling, cable management, temporary holds \\
+      Reinforced butyl rubber tape & sealing + adhesion on irregular surfaces & leaks, drafts, patching tears \\
+      Gorilla tape (cloth) & high tensile strength & structural wraps and rugged repairs \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+
+\begin{frame}[t]
+  \frametitle{Tow strap + heavy-duty rope: moving loads, recovering vehicles, stabilizing structures}
+  \justifying
+  A tow/rope module increases what a single person can reposition, restrain, or recover, especially when traction, terrain, and leverage are working against you.
+
+  \vspace{0.5em}
+  In mechanical terms, strap/rope systems create controllable \emph{load paths}: they redirect force, distribute stress, and convert improvised anchors (trees, rocks, frames) into usable constraints. In operational terms, they prevent time-expensive failure cascades (stuck vehicle \(\rightarrow\) exposure \(\rightarrow\) depleted power \(\rightarrow\) reduced options).
+
+  \vspace{0.8em}
+  \begin{block}{Boundary conditions (safety posture)}
+    \begin{itemize}
+      \item Treat all recovery loads as \emph{stored energy}. Stand clear of the line-of-fire, and avoid sharp edges and damaged fibers.
+      \item Prefer purpose-built attachment points (rated loops, recovery points), and avoid unknown-grade hooks or improvised knots on critical pulls.
+      \item Use gloves as a rope interface to reduce friction burns and to preserve control under wet, cold, or gritty conditions.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=6]
+  \frametitle{Tow/rope selection: strap vs nylon vs polyester (plus rigging add-ons)}
+  \justifying
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Item} & \textbf{Strengths (systems view)} & \textbf{Constraints / selection notes} \\
+      \midrule
+      Heavy-duty tow strap &
+      Wide webbing distributes load and reduces bark/edge cutting; predictable attachment loops; compact storage; vehicle-recovery friendly when matched to rated points &
+      Prefer rated straps and stitched loops; avoid shock-loading if the strap is not designed for kinetic recovery; inspect for cuts, UV damage, and melted fibers \\
+      \addlinespace
+      Heavy-duty nylon rope &
+      Higher elasticity (stretch) can smooth small transients; generally strong and widely available; useful for lashing, hauling, and general-purpose tying &
+      Stretch can store energy and can amplify snap-back hazards; nylon absorbs water and can change handling when wet; abrasion management matters \\
+      \addlinespace
+      Heavy-duty polyester rope &
+      Lower stretch supports positioning, guy-lines, and steady pulls; generally better wet stability than nylon; good dimensional stability under load &
+      Lower stretch can transmit peak loads more directly into anchors; still needs edge protection and inspection for sheath damage \\
+      \addlinespace
+      Rigging add-ons (minimal set) &
+      Rated carabiners or soft shackles simplify quick connections; prusik loops enable adjustable tensioning; edge protection preserves rope integrity &
+      Use only rated hardware for critical loads; avoid unknown alloys and decorative carabiners; store clean and dry to reduce grit-driven abrasion \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+
+  \vspace{0.4em}
+  \scriptsize
+  Practical heuristic: straps excel at broad-contact pulling and recovery hookups, while ropes excel at adjustable geometry (knots, tensioning, lashing), and polyester tends to behave more predictably for static lines.
+\end{frame}
+
+%================================================
+\section{Visibility, sensing, and signaling}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Flashlight (two types): flood + white laser (LEP)}
+  \justifying
+   Flood lighting supports close work and safe movement; long-throw lighting supports distance identification and route finding.
+
+  \vspace{0.5em}
+   Illumination can be treated as an information channel: flood beams increase local situational awareness, while high-candela beams increase distant signal-to-noise. The ANSI/PLATO FL 1 standard defines beam distance at 0.25 lux, enabling comparable ``throw'' metrics.~\cite{plato_fl1,streamlight_ansi}
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Light type} & \textbf{Role} & \textbf{Notes} \\
+      \midrule
+      Flood flashlight (LED) & near-field work, indoor/outdoor mobility & softer beam; reduces tunnel vision \\
+      White laser flashlight (LEP) & long-distance spotting and navigation cues & very tight hotspot; minimal spill; published throws can reach kilometer to multi-kilometer distances in some models (beam distance claims are typically reported in meters under ANSI/PLATO FL 1 conventions)~\cite{lep_example_thor,acebeam_w50_20} \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+
+  % Many "laser flashlights" sold to consumers are LEP (laser-excited phosphor) devices:
+  % a laser excites a phosphor to produce a tight, white beam. Because beam distance is
+  % standardized under ANSI/PLATO FL 1 (0.25 lux), some products credibly advertise
+  % kilometer-scale throw in meters.
+\end{frame}
+
+\begin{frame}[t,shrink=3]
+  \frametitle{LASER pointer and LASER/LEP lighting: safety + extreme-emergency framing}
+  \justifying
+    Lasers are highly visible at distance and can communicate pointing intent. They also carry disproportionate eye and aviation risks. Beam coherence and low divergence make lasers visible over long ranges; that same property concentrates irradiance and increases hazard potential. U.S. and U.K. public agencies emphasize safety controls and proper labeling for consumer lasers.~\cite{fda_laser_pointers,uk_laser_safety}
+
+  \vspace{0.8em}
+   
+  % REVISED: Contextualizes rule-breaking under "Necessity"
+  \begin{block}{Extreme-emergency commentary (The "Life vs. Law" Doctrine)}
+    \footnotesize 
+    \justifying
+    In survival extremis where options are exhausted (e.g., imminent death without rescue), the legal doctrine of \emph{Necessity} generally prioritizes preservation of life over regulatory compliance. While illuminating aircraft is a federal felony carrying severe penalties~\cite{faa_lasers,usc_39a}, a "last resort" hierarchy suggests that the risk of pilot distraction is outweighed only when the signaler faces certain death. This is a \emph{preclusion} threshold: all safer signals (radio, strobes) must have failed.
+  \end{block}
+
+  % REVISED: Frames laser blinding as "Deadly Force" rather than "less-lethal"
+  \begin{block}{Self-defense (Proportionality of Permanent Injury)}
+    \footnotesize 
+    \justifying
+    High-output lasers/LEPs can cause immediate, permanent retinal damage. Legally, intentional blinding is not "less-lethal" non-compliance; it is often classified as \textbf{Great Bodily Harm} or \textbf{Deadly Force}. Therefore, intentional eye-targeting is legally unjustifiable \emph{unless} the defender is facing an imminent threat of death or severe maiming. It is a binary threshold: if you are not authorized to maim or kill the attacker to survive, you are not authorized to blind them.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Magnifying glass: inspection tool with a non-obvious hazard}
+  \justifying
+   Magnification improves small-detail work: splinters, fine print, and small mechanical inspection.
+
+  \vspace{0.5em}
+   A lens concentrates light at a focal spot. In direct sun, this can produce enough local heating to char or ignite tinder. That dual nature makes storage discipline important.
+
+  \vspace{0.8em}
+  \begin{block}{Operational note}
+    Storage inside a pouch or bag prevents accidental sunlight focusing. Used intentionally, magnification supports tool maintenance, electronics inspection, and first-aid splinter removal.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Long eye relief binoculars (example: Nikon 7x50)}
+  \justifying
+   Binoculars extend situational awareness without walking into hazards.
+
+  \vspace{0.5em}
+   Long eye relief improves usability for eyeglasses and reduces viewing fatigue. Nikon highlights long eye relief and adjustable eyecups for the Action Extreme 7x50 (model 7239) as a comfort and accessibility feature.~\cite{nikon_7239}
+
+  \vspace{0.8em}
+  \begin{block}{Daily-life uses}
+    Weather observation, route scouting, identifying landmarks, and verifying animals or people at a distance without closing the gap unnecessarily.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{USB-C thermal camera: heat signatures as information}
+  \justifying
+   Thermal imaging reveals temperature patterns and can work in darkness, fog, and partial visual occlusion.
+
+  \vspace{0.5em}
+   Thermal sensors can support detection tasks (people/animals and heat leaks) when visible light is insufficient. DHS application notes discuss practical use patterns and scanning habits, and recent open-access literature discusses thermal imaging in search and rescue contexts.~\cite{dhs_thermal_imagers,wsar_thermal_uav_2025}
+
+  \vspace{0.8em}
+  \begin{block}{Examples}
+    Locating heat leaks in a cabin; spotting animals near a trail; confirming whether a stove is still hot; scanning a perimeter during a blackout.
+  \end{block}
+\end{frame}
+
+%================================================
+\section{Health, hygiene, and medical realism}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{First-aid kit (specified contents) with cautions}
+  \justifying
+   First aid stabilizes problems early and prevents small issues from turning into mobility-limiting issues.
+
+  \vspace{0.5em}
+   A practical kit balances: bleeding control, cleaning, pain/fever management, and basic symptom relief, while also respecting contraindications and label guidance.
+
+  \vspace{0.8em}
+  \DenseBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX@{}}
+      \toprule
+      \textbf{Item} & \textbf{Purpose and safety notes} \\
+      \midrule
+      Wound wraps + bandages & bleeding control; use direct pressure; keep clean \\
+      Hydrogen peroxide & historically used as an antiseptic, but many clinical sources advise against routine wound use due to tissue irritation/damage; soap and water are commonly preferred~\cite{peroxide_utah,peroxide_cleveland} \\
+      Acetaminophen & pain/fever control; avoid exceeding label limits and avoid double-dosing across multi-ingredient products~\cite{fda_acetaminophen} \\
+      Carmex lip balm & lip barrier support in wind/cold (comfort + cracking prevention) \\
+      Cough syrup & symptomatic relief; follow labeling and interactions \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Petroleum jelly: occlusive barrier for minor skin protection}
+  \justifying
+   Petroleum jelly can reduce chapping and create a moisture barrier on minor skin abrasions after cleaning.
+
+  \vspace{0.5em}
+   As an occlusive, it reduces water loss through skin and supports barrier function. It is not a disinfectant, and it should be used on clean skin/wounds rather than to ``sterilize''.
+
+  \vspace{0.8em}
+  \begin{block}{Daily-life fit}
+    Useful in cold/wind environments for hands, lips, and friction points, especially when living alone implies limited immediate assistance.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Hygiene module: soap, sanitizer, dental kit, and pest repellent}
+  \justifying
+   Hygiene is preventive medicine; it reduces infection probability and improves morale under isolation.
+
+  \vspace{0.5em}
+   In systems terms, hygiene reduces the number of failure cascades triggered by minor contamination or skin breakdown.
+
+  \vspace{0.8em}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \begin{column}{0.38\textwidth}
+      \begin{block}{Core items}
+        \begin{itemize}
+          \item Antibacterial bar/liquid soap
+          \item Hand sanitizer (large and small)
+          \item Toothpaste + toothbrush
+          \item Tearable microfiber cloth (drying + cleaning)
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \begin{block}{Liquified mint (camphor + eucalyptus)}
+        Concentrated plant oils are sometimes used as repellents; open-access review literature describes repellency evidence for camphor oils against arthropods.~\cite{camphor_repellent_2019} Practical use should consider dilution, skin sensitivity, and safe storage.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%================================================
+\section{Water, food-thermal, and containers}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Thermos container: thermal energy storage for daily stability}
+  \justifying
+   A thermos converts intermittent heat availability into steady hydration and calorie support.
+
+  \vspace{0.5em}
+   In thermal terms, it is an insulated reservoir that reduces time-to-hot-liquid and reduces fuel needs for repeated boils.
+
+  \vspace{0.8em}
+  \begin{block}{Practical uses}
+    Hot drinks in storms; warm water for cleaning; safe transport of warm liquids during travel.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Metal cup and Pyrex bowl: complementary heat-safe containers}
+  \justifying
+   Heat-safe containers enable boiling, cooking, and sanitation when infrastructure is unreliable.
+
+  \vspace{0.5em}
+   Metal cups tolerate direct flame and rapid temperature gradients; borosilicate glass bowls support mixing and cooking workflows, but require impact protection.
+
+  \vspace{0.8em}
+  \begin{block}{System pairing}
+    The metal cup is the robust field primitive; the Pyrex bowl supports home-base food prep and controlled heating when breakage risk is managed.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Sawyer-type portable mini water filter: what it does and does not do}
+  \justifying
+   A mini filter can make many backcountry water sources safer quickly.
+
+  \vspace{0.5em}
+   Hollow-fiber filters with 0.1 micron absolute ratings are commonly positioned to remove bacteria and protozoa; published Sawyer MINI specs describe 0.1 micron hollow fiber membrane filtration.~\cite{sawyer_mini_specs,sawyer_eu_specs} CDC guidance notes that portable microfilters do not reliably remove enteric viruses, so pairing filtration with disinfection or boiling can be appropriate depending on context and sanitation conditions.~\cite{cdc_yellowbook_filters_viruses,cdc_backcountry}
+
+  \vspace{0.8em}
+  \begin{block}{Operational habit}
+    The most common failure is clogging: routine backflushing and clean storage extend reliability.
+  \end{block}
+\end{frame}
+
+%================================================
+\section{Power, communications, and computation}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Power architecture: batteries, solar, and ``always-on'' thinking}
+  \justifying
+   Power is the invisible dependency behind light, radios, phones, and thermal sensing.
+
+  \vspace{0.5em}
+   A resilient power system mixes energy sources (solar) with storage (cells and 12V packs) and uses predictable connectors (USB-C) so that recharge pathways remain simple under stress.
+
+  \vspace{0.8em}
+  \begin{block}{Core elements}
+    \begin{itemize}
+      \item 100-W portable foldable solar panel (generation)
+      \item 16-pack 21700 batteries (USB-C) (distributed storage)
+      \item 12V SLA or 12V LiFePO4 battery (bulk storage)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Battery chemistry note: SLA vs LiFePO4 (LFP)}
+  \justifying
+   Lead-acid is familiar and widely available; lithium iron phosphate (LiFePO$_4$) often offers better cycle life and different safety behavior.
+
+  \vspace{0.5em}
+   Comparative literature discusses safety factors including thermal runaway behavior across chemistries, and LFP is frequently analyzed as lower-severity under abuse compared with some other lithium-ion chemistries.~\cite{battery_compare_2024}
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Attribute} & \textbf{12V SLA} & \textbf{12V LiFePO$_4$ (LFP)} \\
+      \midrule
+      Availability & very common & common in off-grid markets \\
+      Energy density & lower & higher (typically) \\
+      Charging tolerance & robust but slow & requires proper battery management \\
+      Safety profile & non-lithium; acid hazard & literature often highlights favorable thermal stability vs some Li-ion chemistries~\cite{battery_compare_2024} \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Long distance two-way radio: legal and practical anchor}
+  \justifying
+   Radios preserve communication when cell networks fail.
+
+  \vspace{0.5em}
+   In the U.S., GMRS (General Mobile Radio Service) is a licensed service in the UHF band; the FCC describes licensing and service overview.~\cite{fcc_gmrs} Range depends strongly on terrain, antenna, and repeaters; practical planning treats radios as line-of-sight constrained.
+
+  \vspace{0.8em}
+  \begin{block}{Daily-life fit}
+    Coordinating trips, checking in during storms, and maintaining situational awareness when living alone far from neighbors.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Phones (two) and laptop compute module}
+  \justifying
+   Redundancy in communication and information devices reduces the probability of total failure.
+
+  \vspace{0.5em}
+   A backup phone provides continuity under battery failure, screen breakage, or loss. A laptop can support offline maps, documentation, thermal image analysis, and power management planning. A ThinkPad X1 Extreme with a GTX 1650 graphics processing unit (GPU) can also support local compute tasks (image enhancement, model inference) when internet is absent.
+
+  \vspace{0.8em}
+  \begin{block}{Connection logic}
+    Thermal camera + laptop/GPU can enable better interpretation and archival of observations, turning transient field cues into actionable logs.
+  \end{block}
+\end{frame}
+
+%================================================
+\section{Organization, storage, and maintenance routines}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Slider storage bags and microfiber cloth: micro-organization}
+  \justifying
+   Organization reduces time loss and reduces the chance that small parts disappear at the worst moment.
+
+  \vspace{0.5em}
+   Labeled bags reduce entropy and cognitive load, and they provide moisture barriers for batteries, first aid, and ignition tools.
+
+  \vspace{0.8em}
+  \begin{block}{Simple labeling schema}
+    \texttt{CATEGORY-ITEM-COUNT-DATE} (example: \texttt{POWER-21700-4-2026-01-03})
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=6]
+  \frametitle{Maintenance schedule (lightweight, realistic)}
+  \justifying
+  \DenseBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Cadence} & \textbf{Action} & \textbf{Primary items} \\
+      \midrule
+      Weekly & quick functional check & flashlight modes; radio power-on; phone charging cables \\
+      Monthly & inspect wear + replenish & gloves, tapes, first-aid consumables, batteries \\
+      Quarterly & deep clean + test & wrenches/pliers lubrication; scissor sharpness; leather condition \\
+      After heavy use & restore to baseline & wash/dry shells; backflush water filter; relabel bags \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+
+  \vspace{0.6em}
+  \begin{block}{Why cadence matters}
+    ``Daily-ready'' gear stays reliable because it is repeatedly tested in mundane tasks; emergency-only storage tends to degrade silently.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Emergency extraction modules (updated: includes tow/rigging)}
+  \centering
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{minipage}{0.98\textwidth}
+  \scriptsize
+  \dirtree{%
+  .1 Emergency extraction modules.
+  .2 Light \& navigation.
+  .3 Flood flashlight; white laser (LEP) long-throw; spare cells.
+  .2 Shelter \& insulation.
+  .3 Thermals (base layers); windbreaker; waterproof parka; waterproof hat.
+  .2 Hands \& cutting.
+  .3 Gloves (work + winter); thick utility knife; thin slicer knife; scissors.
+  .2 Water \& containers.
+  .3 Mini filter; metal cup; thermos.
+  .2 Health \& hygiene.
+  .3 First-aid subset; petroleum jelly (wounds/skin); sanitizer; tweezers; nail clippers.
+  .2 Comms \& power.
+  .3 Radio; primary phone; backup phone; USB-C cables; 21700 cells.
+  .2 Tow \& rigging.
+  .3 Heavy-duty tow strap; heavy-duty rope (nylon or polyester).
+  .3 Rated connectors (carabiner/soft shackle); prusik loop; edge protection.
+  }
+  \end{minipage}
+  \end{adjustbox}
+\end{frame}
+
+
+
+%================================================
+\section{Tables for planning and selection}
+%================================================
+
+% ============================
+% FRAME UPDATE 5 (Optional, paste-able replacement for the "Selection table: minimum viable" frame)
+% Adds a "Tow/rigging" row so planning tables remain consistent with the new branch.
+% ============================
+\begin{frame}[t,shrink=4]
+  \frametitle{Selection table: what ``minimum viable'' means here (updated: tow/rigging)}
+  \justifying
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Category} & \textbf{Minimum viable} & \textbf{Upgrade trigger} \\
+      \midrule
+      Light & flood flashlight + spare power & add LEP long-throw for distance spotting~\cite{plato_fl1,lep_example_thor} \\
+      Cutting & thin slicer + thick utility knife & add shears/can tool for packaging extremes \\
+      Water & filter or boil container & add redundancy for freezing and clogging~\cite{sawyer_mini_specs} \\
+      Comms & one phone + radio pathway & add backup phone and bigger battery reservoir~\cite{fcc_gmrs} \\
+      Medical & wraps + bandages + analgesic & refine contents based on known conditions~\cite{fda_acetaminophen} \\
+      Tow/rigging & tow strap or rope + gloves & add rated connectors + edge protection for higher-load tasks \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+
+\begin{frame}[t]
+  \frametitle{Etymologies and terminology anchors}
+  \justifying
+  \begin{block}{A few useful anchors}
+    \begin{itemize}
+      \item \GearTag{Laser} expands to \emph{Light Amplification by Stimulated Emission of Radiation}; the expansion itself is a reminder that the beam is concentrated and safety-critical.
+      \item \GearTag{Torque} comes from Latin \emph{torquere} (to twist), reinforcing ``twist force'' intuition.
+      \item \GearTag{Thermal} traces to Greek \emph{therm\={e}} (heat), which connects naturally to thermal imaging and insulation logic.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+%================================================
+
+
+%================================================
+\section{Ignition, cooking, and heat}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Rechargeable electric lighter: ignition without liquid fuel}
+  \justifying
+   A rechargeable electric lighter provides repeatable ignition for stoves, candles, and emergency fire-starting tasks without relying on disposable fuel canisters.
+
+  \vspace{0.5em}
+   Electrically generated arcs or heated elements convert stored electrical energy into localized heat. The operational advantage is repeatability and weather tolerance; the operational risk is hidden depletion if charging routines are neglected.
+
+  \vspace{0.8em}
+  \begin{block}{Daily-life fit}
+    Useful for routine cooking and as a backup ignition path when matches or butane lighters are damp, expired, or missing.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Cooking and sanitation: metal cup + Pyrex bowl + thermos as a set}
+  \justifying
+   Heat-safe containers support hydration, basic cooking, and sanitation, which are core stability primitives for living alone.
+
+  \vspace{0.5em}
+   Containers define the boundary conditions for heat transfer, contamination control, and portioning. Their real value appears under time pressure, cold exposure, and limited water availability.
+
+  \vspace{0.8em}
+  \TableBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Item} & \textbf{Primary strength} & \textbf{Operational note} \\
+      \midrule
+      Metal cup & direct-flame compatible; durable & supports boiling and hot drinks; doubles as scoop \\
+      Pyrex bowl & mixing, cooking prep, controlled heating & protect against impact; store wrapped \\
+      Thermos & heat retention for hours & converts intermittent heat into steady availability \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+%================================================
+\section{Heavy tools and structural tasks}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Shovel + axe: high capability, high consequence tools}
+  \justifying
+   A shovel enables snow clearing, drainage, and earth moving; an axe enables wood processing and structural work. Both scale capability rapidly.
+
+  \vspace{0.5em}
+   These tools raise the ``mechanical power'' available to a single operator, and they also raise consequences of error. They belong in a daily-life wilderness stack when routine tasks demand them, and they belong in emergency extraction only when space and training justify them.
+
+  \vspace{0.8em}
+  \begin{block}{Safety posture}
+    Eye protection, controlled swing radius, stable footing, and fatigue management dominate safe operation. Under cold stress, conservative technique prevents slip-path injuries.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Structural work: shovel/axe pairs naturally with mallet/chisel}
+  \justifying
+   When living alone, maintenance and small construction tasks often appear without warning (frozen doors, blocked drainage, downed branches).
+
+  \vspace{0.5em}
+   The heavy-tool module creates macro-changes (move earth, split wood), while mallet/chisel create micro-changes (shape joints, open channels). Together, they support a wider task manifold than either subsystem alone.
+\end{frame}
+
+%================================================
+\section{Work surfaces, storage, and logistics}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Foldable mini table: a clean work plane as a safety control}
+  \justifying
+   A small, stable table reduces improvisation. It creates a predictable surface for tool work, first aid, and electronics.
+
+  \vspace{0.5em}
+   Many injuries and losses occur because tasks are performed on unstable surfaces. A portable table is effectively an engineering control: it changes geometry and reduces drops, contamination, and tool slips.
+
+  \vspace{0.8em}
+  \begin{block}{Daily-life fit}
+    Electronics staging (phones, thermal camera), food prep, and clean first-aid setup when a cabin or shelter lacks stable counters.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=4]
+  \frametitle{Home-base layout: reducing retrieval time and decision overhead}
+  \justifying
+  \DenseBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Zone} & \textbf{What lives there} & \textbf{Why it belongs there} \\
+      \midrule
+      Entry/exit shelf & flashlight, gloves, pen, radio & highest-frequency retrieval; storm readiness \\
+      Tool drawer/bin & knives, scissors, pliers, wrenches, tape & repair flow: open \(\rightarrow\) fix \(\rightarrow\) restore \\
+      Water/thermal shelf & thermos, cup, filter, bowl & hydration/cooking is a daily stabilizer \\
+      Power crate & 21700 cells, USB-C cables, 12V pack, solar panel & minimizes ``where is the cable?'' failure \\
+      Medical/hygiene box & first aid, sanitizer, soap, dental kit & reduces infection probability through accessibility \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+%================================================
+\section{Power deep dive: practical energy accounting}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{21700 batteries (USB-C): distributed energy, and storage discipline}
+  \justifying
+   A bank of rechargeable cells distributes risk: one failed cell does not collapse the whole system.
+
+  \vspace{0.5em}
+   Distributed storage supports parallel charging and modular deployment across lights, radios, and charging banks. The trade-off is inventory management: labeling, rotation, and safe storage prevent silent depletion and reduce short-circuit risk.
+
+  \vspace{0.8em}
+  \begin{block}{Operational routine}
+    Cells rotate through a simple state machine: \texttt{CHARGED} \(\rightarrow\) \texttt{IN-USE} \(\rightarrow\) \texttt{NEEDS-CHARGE} \(\rightarrow\) \texttt{CHARGED}. Slider bags and labels implement that state tracking physically.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{100-W foldable solar panel: resilience via generation}
+  \justifying
+   Solar provides independence from grid and fuel, especially when living alone increases the penalty of being offline.
+
+  \vspace{0.5em}
+   Practical output depends on sun angle, cloud cover, and temperature. The operational win is not peak watts; it is the ability to restore phones, radios, lights, and thermal sensing over multi-day outages.
+
+  \vspace{0.8em}
+  \begin{block}{Planning note}
+    The solar panel is most valuable when paired with a buffer battery (12V pack or power bank) so charging can occur during sun and consumption can occur at night.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t,shrink=6]
+  \frametitle{Notional daily energy budget (planning table)}
+  \justifying
+  % This table is intentionally generic; it acts as a template rather than a claim about any specific product.
+  \DenseBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+      \toprule
+      \textbf{Load} & \textbf{Why it matters} & \textbf{Planning heuristic} \\
+      \midrule
+      Phone (primary) & maps, comms, documentation & prioritize charging; treat as critical path \\
+      Phone (backup) & redundancy under breakage/loss & keep at moderate charge; store protected \\
+      Flashlight (flood) & movement and close work & reserve a low mode for long runtimes \\
+      Flashlight (LEP) & distance spotting & use briefly; high candela does not imply high energy cost \\
+      Radio & check-ins, rescue channel & schedule check windows to reduce idle drain \\
+      Thermal camera & detection and inspection & treat as short-duty sensor; store warm \\
+      Laptop & planning, data processing & batch tasks; charge from larger reservoir \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+%================================================
+\section{Additional item notes (completeness pass)}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Ballpoint pen: mechanical simplicity in cold/wet routines}
+  \justifying
+   A ballpoint pen tends to remain usable under variable temperature and humidity, enabling labeling and logging when electronics fail.
+
+  \vspace{0.5em}
+   Written logs reduce working-memory load and support traceability across tasks (repairs, battery rotation, water filter backflush dates). In isolation, traceability reduces repeated mistakes.
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Slider storage bags: containment, labeling, and moisture control}
+  \justifying
+   Bags prevent small-item loss and enable a modular packing philosophy.
+
+  \vspace{0.5em}
+   Containment is a reliability tool: fewer dropped parts, fewer contaminated supplies, and faster retrieval. When combined with a pen, bags become a physical database of inventory and states.
+
+  \vspace{0.8em}
+  \begin{block}{Daily-life fit}
+    Batteries, first-aid submodules, tape segments, and small electronics adapters remain organized and dry.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Tearable microfiber cloth: optics, hygiene, and adhesion prep}
+  \justifying
+   A cloth supports cleaning, drying, and reducing grime that ruins tape adhesion.
+
+  \vspace{0.5em}
+   Clean surfaces increase the probability that repairs hold. A tearable format also supports creating smaller single-use pieces for medical cleanup or optics care without contaminating the whole cloth.
+\end{frame}
+
+\begin{frame}[t,shrink=2]
+  \frametitle{Water treatment decision ladder (filter vs boil vs disinfect)}
+  \justifying
+  \DenseBodySize
+  \begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lX X@{}}
+      \toprule
+      \textbf{Context} & \textbf{Best-first method} & \textbf{Why} \\
+      \midrule
+      Clear water; low human impact & microfilter + good handling & fast and convenient; manage recontamination~\cite{sawyer_mini_specs} \\
+      High human impact/ poor sanitation risk & filter \emph{then} disinfect or boil & CDC notes microfilters do not reliably remove enteric viruses~\cite{cdc_yellowbook_filters_viruses,cdc_backcountry} \\
+      Very cold conditions & boil when feasible; protect filter from freezing & freezing can damage hollow fibers and reduce reliability \\
+      Harmful algal blooms suspected & avoid source entirely & toxins may not be removed by typical backcountry treatment \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{LEP ``white laser'' flashlight: why multi-kilometer throw is plausible}
+  \justifying
+   Very tight beams can remain ``useful'' at long distances, even when total lumens are modest.
+
+  \vspace{0.5em}
+   Under ANSI/PLATO FL 1 conventions, beam distance corresponds to where illumination falls to 0.25 lux, roughly comparable to full moon illumination in an open field.~\cite{plato_fl1} Manufacturer specs for some zoomable LEP models report beam distances on the order of several kilometers in spot mode.~\cite{acebeam_w50_20}
+
+  \vspace{0.8em}
+  \begin{block}{Operational interpretation}
+    Long throw supports identification and route confirmation. Flood light remains the primary tool for safe walking and working, because it reduces tunnel vision.
+  \end{block}
+\end{frame}
+
+
+\section{Acronym glossary, references, and license}
+%================================================
+
+\begin{frame}[t]
+  \frametitle{Acronym glossary}
+  \justifying
+  \begin{itemize}
+    \item \GearTag{ANSI}: American National Standards Institute.
+    \item \GearTag{PLATO}: Portable Lights American Trade Organization.
+    \item \GearTag{FL 1}: Flashlight Basic Performance Standard (ANSI/PLATO FL 1).
+    \item \GearTag{PPE}: Personal Protective Equipment.
+    \item \GearTag{PPC}: Personal Protective Clothing.
+    \item \GearTag{LEP}: Laser-Excited Phosphor (a common consumer ``white laser'' flashlight approach).
+    \item \GearTag{WBM}: Waterproof-breathable membrane(s).
+    \item \GearTag{DWR}: Durable water repellent (surface treatment).
+    \item \GearTag{USB-C}: Universal Serial Bus Type-C.
+    \item \GearTag{GPU}: Graphics Processing Unit.
+    \item \GearTag{GMRS}: General Mobile Radio Service.
+    \item \GearTag{SLA}: Sealed Lead-Acid (battery).
+    \item \GearTag{LFP}: Lithium Iron Phosphate (LiFePO$_4$).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{CC BY 4.0 license (Onri Jay Benally)}
+  \justifying
+  \begin{block}{License}
+    This presentation is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).~\cite{ccby4}
+  \end{block}
+
+  \begin{block}{Attribution}
+    \textbf{Onri Jay Benally} (2026). Reuse is permitted for any purpose, including commercial use, provided appropriate credit is given, a link to the license is included, and changes (if any) are indicated.
+  \end{block}
+
+  \begin{block}{Suggested attribution line}
+    ``Onri Jay Benally, \emph{Onri's Basic Gear for Survival or Living Alone}, CC BY 4.0, 2026.''
+  \end{block}
+\end{frame}
+
+\end{document}
