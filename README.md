@@ -1,5 +1,5 @@
 # Onris-Principles
-An Introduction to the core principles of Onri Jay Benally.
+An introduction to the core principles of Onri Jay Benally.
 
 ## The Core Principles of Onri Jay Benally
 - Self-sufficiency
@@ -14,6 +14,8 @@ If one provides the right ingredients, applied in the right way, then the system
 *Murphy's Law states: "anything that can go wrong, will go wrong."
 
 **Murphy's Law highlights the inevitability of failure modes.
+
+Link to the full PDF overview: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Introduction_to_Onri_s_Principles.pdf>
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
