@@ -1,7 +1,7 @@
 # Onris-Principles
 An Introduction to Onri's Core Principles.
 
-## Onri's Core Principles
+## The Core Principles of Onri Jay Benally
 - Self-sufficiency
 - De-nuancing
 - Strategy (starting with information gathering/ raw data compilation)
