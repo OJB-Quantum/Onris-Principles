@@ -1,5 +1,5 @@
 # Onris-Principles
-An Introduction to Onri's Core Principles.
+An Introduction to the core principles of Onri Jay Benally.
 
 ## The Core Principles of Onri Jay Benally
 - Self-sufficiency
