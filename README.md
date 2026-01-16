@@ -12,6 +12,7 @@ I am of the opinion, which is very strong, that nuance, when applied to a topic,
 If you have the right ingredients, applied in the right way, then the system of interest will solve its own self internally, no matter how complicated its mechanics are. - It's kind of like a perpendicular or orthogonal relationship to that of Murphy's Law*,** .
 
 *Murphy's Law states: "anything that can go wrong, will go wrong."
+
 **Murphy's Law highlights the inevitability of failure modes.
 
 ![image](https://github.com/user-attachments/assets/92a9015a-f133-4185-aadf-d7039bc15c89)
