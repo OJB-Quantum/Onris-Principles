@@ -43,9 +43,6 @@ If one provides the right ingredients, applied in the right way, then the system
 
 <img width="3722" height="auto" alt="image" src="https://github.com/user-attachments/assets/a449556e-9890-4b2f-961b-b7eecc39907c" />
 
-<img width="3730" height="auto" alt="image" src="https://github.com/user-attachments/assets/2cecc0de-704c-4b8c-bb7d-371d67b1a049" />
-
 <img width="3729" height="auto" alt="image" src="https://github.com/user-attachments/assets/0590ea42-91e3-41c2-b5be-d08fb3cab29e" />
-
 
 ![image](https://github.com/user-attachments/assets/b7d70690-e380-4836-83c2-e8507163e6e2)
