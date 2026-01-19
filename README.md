@@ -15,6 +15,21 @@ If one provides the right ingredients, applied in the right way, then the system
 
 **Murphy's Law highlights the inevitability of failure modes.
 
+```
++---------------------+       +---------------------+       +---------------------+       +---------------------+       +---------------------+
+|     Information     |       |     Structuring     |       |       Models        |       |      Decisions      |       |       Actions       |
+|      gathering      |------>|  (schemas, labels,  |------>|    (assumptions     |------>|   (rules, rubrics)  |------>|    (experiments,    |
+|     (raw data)      |       |       units)        |       |      explicit)      |       |                     |       |       builds)       |
++---------------------+       +---------------------+       +---------------------+       +---------------------+       +---------------------+
+           ^                                                                                                                       |
+           |                                                                                                                       |
+           |                                             +---------------------+                                                   |
+           |                                             |      Feedback       |                                                   |
+           +---------------------------------------------|   (measure, learn,  |<--------------------------------------------------+
+                                                         |       update)       |
+                                                         +---------------------+
+```
+
 Link to the full PDF overview: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Introduction_to_Onri_s_Principles.pdf>
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
