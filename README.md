@@ -81,6 +81,7 @@ Once these operations are applied, the topic changes identity: it becomes an *as
 ---
 
 Quantitative representation for proactive optimism:
+
 $$
 a^\* \in \arg\max_{a \in A} \mathbb{E}[\Delta P \mid a, D] \;\;\;\;\text{subject to}\;\;\; risk(a) \le r_{\max}
 $$
