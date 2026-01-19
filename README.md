@@ -46,6 +46,49 @@ Once these operations are applied, the topic changes identity: it becomes an *as
 
 ---
 
+#### The Core Principles as a Tree
+
+```
+├─ Self-sufficiency (autarky adjacent)
+│  ├─ Reproducibility (toolchains, documentation)
+│  ├─ Dependency control (single-point-of-failure hunting)
+│  ├─ Local redesign capacity (ingredients remain changeable)
+│  └─ Historical/technical lineage
+│     ├─ Systems engineering (interfaces, verification)
+│     └─ Cybernetics (regulation via feedback) (Wiener)
+├─ De-nuancing (ambiguity closure, operationalization)
+│  ├─ Assumption register (versioned premises)
+│  ├─ Operating envelope (bounded contexts)
+│  ├─ Decision compilation (rubrics, checklists, tests)
+│  └─ Mathematical lineage
+│     ├─ Information theory (Shannon entropy, mutual information)
+│     ├─ Information Bottleneck (relevance-preserving compression) (Tishby et al.)
+│     ├─ Minimum Description Length (compression as selection) (Rissanen, Grünwald tutorial)
+│     └─ Model reduction (state compression, coarse-graining)
+├─ Strategy (data-first, pipeline to action)
+│  ├─ Observe, Orient, Decide, Act (OODA) (Boyd)
+│  ├─ Measurement discipline (schemas, units, labels)
+│  ├─ Models with explicit assumptions (traceability)
+│  └─ Feedback loop closure (learning as control)
+└─ Proactive optimism (performance-based, resilience aligned)
+   ├─ Leading indicators (throughput, yield, decision latency)
+   ├─ Tight iteration loops (short learning cycles)
+   ├─ Risk constraints (bounded exploration)
+   └─ Resilience engineering lineage
+      └─ Safety-II (learning from success conditions) (Hollnagel)
+```
+
+---
+
+Quantitative representation for proactive optimism:
+$$
+a^\* \in \arg\max_{a \in A} \mathbb{E}[\Delta P \mid a, D] \;\;\;\;\text{subject to}\;\;\; risk(a) \le r_{\max}
+$$
+
+Here, $P$ denotes a performance score (yield, latency, robustness), $D$ denotes compiled evidence, and $r_{\max}$ encodes risk tolerance.
+
+---
+
 ```
 +---------------------+       +---------------------+       +---------------------+       +---------------------+       +---------------------+
 |     Information     |       |     Structuring     |       |       Models        |       |      Decisions      |       |       Actions       |
@@ -61,9 +104,32 @@ Once these operations are applied, the topic changes identity: it becomes an *as
                                                          +---------------------+
 ```
 
+### Visual metaphor
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
+
+### Strategy as a pipeline
+
 <img width="3729" height="auto" alt="image" src="https://github.com/user-attachments/assets/0590ea42-91e3-41c2-b5be-d08fb3cab29e" />
 
+
+### Aphorism 
+
 ![image](https://github.com/user-attachments/assets/b7d70690-e380-4836-83c2-e8507163e6e2)
+
+---
+
+## Open-Access References
+
+1. Information Bottleneck (relevance-preserving compression): https://arxiv.org/abs/physics/0004057
+2. Minimum Description Length (conceptual and technical tutorial): https://arxiv.org/abs/math/0406077
+3. Cybernetics (feedback as control and communication, open access): https://direct.mit.edu/books/oa-monograph/4581/Cybernetics-or-Control-and-Communication-in-the
+4. W. Ross Ashby archive (requisite variety lineage, open materials): https://ashby.info/
+5. Ashby, “An Introduction to Cybernetics” (PDF via archive): https://ashby.info/Ashby-Introduction-to-Cybernetics.pdf
+6. Shannon, “A Mathematical Theory of Communication” (information theory foundation): https://ia803209.us.archive.org/27/items/bstj27-3-379/bstj27-3-379_text.pdf
+7. Boyd, “Patterns of Conflict” (OODA loop context): https://www.coljohnboyd.com/static/documents/1986-12__Boyd_John_R__Patterns_of_Conflict__PPT-PDF.pdf
+8. Hollnagel et al., “From Safety-I to Safety-II” (white paper): https://www.england.nhs.uk/signuptosafety/wp-content/uploads/sites/16/2015/10/safety-1-safety-2-whte-papr.pdf
+9. MIT OpenCourseWare (dot product and orthogonality intuition bridge): https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/resources/lecture-1-dot-product/
+
+
