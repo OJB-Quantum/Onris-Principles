@@ -82,11 +82,11 @@ Once these operations are applied, the topic changes identity: it becomes an *as
 
 Quantitative representation for proactive optimism:
 
-$$
-a^* \in \arg\max_{a \in A} \mathbb{E}[\Delta P \mid a, D] \quad \text{subject to} \quad \text{risk}(a) \le r_{\max}
+$$ 
+a^* \in \arg\max_{a \in A} \mathbb{E}[\Delta P \mid a, D] \quad \text{subject to} \quad \text{risk}(a) \le r_{\max} 
 $$
 
-Here, $P$ denotes a performance score (yield, latency, robustness), $D$ denotes compiled evidence, and $r_{\max}$ encodes risk tolerance.
+Here, $ P $ denotes a performance score (yield, latency, robustness), $ D $ denotes compiled evidence, and $ r_{\max} $ encodes risk tolerance.
 
 ---
 
