@@ -105,12 +105,12 @@ Here, $P$ denotes a performance score (yield, latency, robustness), $D$ denotes 
                                                          +---------------------+
 ```
 
-### Visual metaphor
+### Strategy as a pipeline
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
 
-### Strategy as a pipeline
+### Visual metaphor
 
 <img width="3729" height="auto" alt="image" src="https://github.com/user-attachments/assets/0590ea42-91e3-41c2-b5be-d08fb3cab29e" />
 
