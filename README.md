@@ -55,8 +55,6 @@ Once these operations are applied, the topic changes identity: it becomes an *as
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
-<img width="3722" height="auto" alt="image" src="https://github.com/user-attachments/assets/a449556e-9890-4b2f-961b-b7eecc39907c" />
-
 <img width="3729" height="auto" alt="image" src="https://github.com/user-attachments/assets/0590ea42-91e3-41c2-b5be-d08fb3cab29e" />
 
 ![image](https://github.com/user-attachments/assets/b7d70690-e380-4836-83c2-e8507163e6e2)
