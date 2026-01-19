@@ -15,6 +15,14 @@ If one provides the right ingredients, applied in the right way, then the system
 
 **Murphy's Law highlights the inevitability of failure modes.
 
+---
+
+- Link to PDF slides on The Core Principles of Onri: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Introduction_to_Onri_s_Principles.pdf>
+
+- Link to PDF slides on Onri's Basic Suvival Gear: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Onri_s_Basic_Survival_Gear.pdf>
+
+---
+
 ```
 +---------------------+       +---------------------+       +---------------------+       +---------------------+       +---------------------+
 |     Information     |       |     Structuring     |       |       Models        |       |      Decisions      |       |       Actions       |
@@ -30,9 +38,6 @@ If one provides the right ingredients, applied in the right way, then the system
                                                          +---------------------+
 ```
 
-Link to PDF slides on The Core Principles of Onri: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Introduction_to_Onri_s_Principles.pdf>
-
-Link to PDF slides on Onri's Basic Suvival Gear: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Onri_s_Basic_Survival_Gear.pdf>
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
@@ -42,4 +47,3 @@ Link to PDF slides on Onri's Basic Suvival Gear: <https://github.com/OJB-Quantum
 
 
 ![image](https://github.com/user-attachments/assets/b7d70690-e380-4836-83c2-e8507163e6e2)
-
