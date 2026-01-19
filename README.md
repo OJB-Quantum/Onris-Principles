@@ -37,6 +37,15 @@ Once these operations are applied, the topic changes identity: it becomes an *as
 
 ---
 
+| Principle | What it means | Primary artifacts | Observable tests | Typical failure mode it prevents |
+|---|---|---|---|---|
+| Self-sufficiency | Capability stays local, reproducible, and dependency-aware | Reproducible toolchain docs, fallback interfaces, “rebuild from scratch” checklist | Time-to-rebuild, dependency count, single-point-of-failure count, recovery time | Fragile reliance (vendor, person, network) that collapses under stress |
+| De-nuancing | Ambiguity becomes explicit assumptions, then becomes a decision rule | Assumption register (versioned), operating envelope, rubric or test suite | Ambiguity sources trending down, decision consistency across contexts, fewer re-litigations | Perpetual interpretive loops, policy drift, “meetings as runtime” |
+| Strategy (data-first) | Inputs and constraints precede narrative, plan becomes an algorithm | Data log, schema/units, model sketch, decision procedure | Reproducibility of decisions, sensitivity analysis, reduced decision latency | Story-driven plans, hidden priors, scope creep without detection |
+| Proactive optimism (performance-based) | Optimism becomes a policy that selects actions improving leading indicators | Metric dashboard, experiment cadence, retrospectives, improvement backlog | Leading indicators improve (yield, throughput, mean-time-between-failures), tighter feedback loops | Hope-as-vibe, local maxima, fatigue from unmeasured effort |
+
+---
+
 ```
 +---------------------+       +---------------------+       +---------------------+       +---------------------+       +---------------------+
 |     Information     |       |     Structuring     |       |       Models        |       |      Decisions      |       |       Actions       |
