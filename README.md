@@ -15,14 +15,46 @@ If one provides the right ingredients, applied in the right way, then the system
 
 **Murphy's Law highlights the inevitability of failure modes.
 
-Link to the full PDF overview: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Introduction_to_Onri_s_Principles.pdf>
+---
+
+### When “nuance goes to zero” becomes true (by design)
+
+In open-ended reality, nuance stays present because the system has unbounded contexts, and because stakeholders optimize different objectives. Through deliberate restriction and explicit assumptions, the de-nuancing goal becomes achievable.
+
+#### Making “zero nuance” effectively true
+
+1. **Scope restriction:** define a bounded operating envelope (inputs, outputs, constraints), so ambiguity loses room to hide.
+2. **Assumption closure:** write assumptions as first-class objects (versioned), so disagreement becomes traceable.
+3. **Decision compilation:** convert discussion into an executable policy (checklist, rubric, test, or optimization), so interpretation becomes repeatable.
+
+Once these operations are applied, the topic changes identity: it becomes an *assumption-closed operating procedure* rather than a perpetually interpretive conversation.
+
+---
+
+- Link to PDF slides on The Core Principles of Onri: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Introduction_to_Onri_s_Principles.pdf>
+
+- Link to PDF slides on Onri's Basic Suvival Gear: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Onri_s_Basic_Survival_Gear.pdf>
+
+---
+
+```
++---------------------+       +---------------------+       +---------------------+       +---------------------+       +---------------------+
+|     Information     |       |     Structuring     |       |       Models        |       |      Decisions      |       |       Actions       |
+|      gathering      |------>|  (schemas, labels,  |------>|    (assumptions     |------>|   (rules, rubrics)  |------>|    (experiments,    |
+|     (raw data)      |       |       units)        |       |      explicit)      |       |                     |       |       builds)       |
++---------------------+       +---------------------+       +---------------------+       +---------------------+       +---------------------+
+           ^                                                                                                                       |
+           |                                                                                                                       |
+           |                                             +---------------------+                                                   |
+           |                                             |      Feedback       |                                                   |
+           +---------------------------------------------|   (measure, learn,  |<--------------------------------------------------+
+                                                         |       update)       |
+                                                         +---------------------+
+```
+
 
 <img width="3724" height="auto" alt="image" src="https://github.com/user-attachments/assets/e631d4af-7aad-4593-bc53-497769adff76" />
 
-<img width="3730" height="auto" alt="image" src="https://github.com/user-attachments/assets/2cecc0de-704c-4b8c-bb7d-371d67b1a049" />
-
 <img width="3729" height="auto" alt="image" src="https://github.com/user-attachments/assets/0590ea42-91e3-41c2-b5be-d08fb3cab29e" />
 
-
 ![image](https://github.com/user-attachments/assets/b7d70690-e380-4836-83c2-e8507163e6e2)
-
