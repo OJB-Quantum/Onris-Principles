@@ -1,5 +1,5 @@
 # Onris-Principles
-An introduction to the core principles of Onri Jay Benally.
+An introduction to the core principles of Onri Jay Benally, from the perspectives of a hardware engineer.
 
 ## The Core Principles of Onri Jay Benally
 - Self-sufficiency
