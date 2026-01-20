@@ -33,7 +33,7 @@ Once these operations are applied, the topic changes identity: it becomes an *as
 
 - Link to PDF slides on The Core Principles of Onri: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Introduction_to_Onri_s_Principles.pdf>
 
-- Link to PDF slides on Onri's Basic Suvival Gear: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Onri_s_Basic_Survival_Gear.pdf>
+- Link to PDF slides on Onri's Basic Survival Gear: <https://github.com/OJB-Quantum/Onris-Principles/blob/main/Onri_s_Basic_Survival_Gear.pdf>
 
 ---
 
